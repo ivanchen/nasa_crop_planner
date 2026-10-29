@@ -1,0 +1,19 @@
+Judul
+Wiweka: AI Agent co-advisor untuk Petani Indonesia untuk membantu Rotasi Tanam menggunakan Berbasis Data Satelit NASA 
+Deskripsi
+TaniPilot adalah chat agent baik melalui handphone maupun web yang membantu petani dan penyuluh memilih tanaman untuk musim tanam berikutnya (MT1–MT3). Petani cukup share lokasi dia dan tanaman terakhir. Agen lalu mengambil data NASA (suhu dan hujan dari POWER, kelembapan tanah dari SMAP, kondisi vegetasi dari MODIS) dan menggabungkannya dengan data tanah, karakter tanaman, serta prioritas petani seperti hemat air, tahan kekeringan, kesehatan tanah, dan pendapatan. Semua angka dan rekomendasi diberi bobotnya sehingga petani dapat melihatnya secara objektif. Agen hanya menanyakan data yang kurang, menjelaskan hasilnya dengan bahasa sederhana, dan memberi peringatan dini ketika risiko kekeringan meningkat.
+Dampak
+Petani kecil sering memutuskan untuk menanam berdasarkan kebiasaan, padahal kekeringan, banjir, dan menurunnya kesehatan tanah makin sulit ditebak. TaniPilot membantu mereka memilih rotasi yang menghemat air, menjaga tanah lewat tanaman penambat nitrogen seperti kedelai dan kacang-kacangan, dan mengurangi risiko gagal tanam. Hasilnya adalah keputusan yang lebih tahan iklim dan lahan yang lebih sehat dalam jangka panjang.
+Cakupan
+Data NASA bersifat global, jadi sistem bisa dipakai di wilayah mana pun hanya dengan koordinat. Prototipe difokuskan pada dua wilayah yang kontras: sawah irigasi di Jawa dan lahan kering di Nusa Tenggara. Tabel tanaman dan musim dapat diperluas ke wilayah dan komoditas lain. Pengguna utamanya adalah penyuluh dan kelompok tani, dengan saran di tingkat desa atau kecamatan.
+Validitas data
+Iklim memakai NASA POWER, kelembapan tanah memakai SMAP, dan vegetasi memakai MODIS NDVI. Proyeksi iklim masa depan memakai NEX-GDDP-CMIP6. Data tanah memakai SoilGrids dan kebutuhan tanaman memakai FAO EcoCrop. Setiap rekomendasi menyebut sumber data dan tingkat ketidakpastiannya. Karena resolusi SMAP dan SoilGrids kasar, saran dinyatakan untuk tingkat wilayah, dan petani dapat mengoreksi data tanah dengan pengamatan lapangan (tekstur, warna, pH).
+Kelayakan
+Prototipe sudah berjalan: mesin skor rotasi dengan antarmuka web, dan pengambilan data iklim langsung dari API NASA POWER. Tahap berikutnya adalah menyambungkan SMAP dan MODIS lewat layanan backend kecil, lalu membungkus mesin skor sebagai empat tool untuk agen. Semua data yang dipakai gratis dan terbuka, dan sebagian besar komponennya memakai teknologi umum.
+Pembeda
+Berbeda dari kalender tanam yang hanya memberi jadwal, TaniPilot menilai rotasi berdasarkan kesehatan tanah, penghematan air, dan prioritas tiap petani. Agennya tidak mengarang jawaban: setiap angka berasal dari tool dan dapat ditelusuri ke sumber data. Sistem juga proaktif, yaitu mengirim peringatan sebelum musim kering, dan mengingat riwayat tanam setiap lahan.
+Kemudahan demo
+Demo mengikuti satu cerita: Pak Slamet, petani 0,4 ha di Klaten, dari akhir musim hujan sampai MT3. Penonton melihat percakapan di WhatsApp, data NASA yang ditarik, tiga rotasi teratas beserta alasannya, lalu perubahan saran saat skenario kekeringan atau iklim 2050 dipilih. Tombol "maju satu minggu" menunjukkan peringatan proaktif tanpa harus menunggu data nyata.
+Relevansi tema
+Challenge ini meminta alat bantu keputusan yang memakai observasi Bumi NASA, informasi tanah lokal, karakter tanaman, dan prioritas petani untuk memperkuat kesehatan tanah dan adaptasi terhadap perubahan iklim. TaniPilot memenuhi keempat unsur itu, ditambah antarmuka percakapan yang membuat hasilnya bisa dipakai petani, bukan hanya peneliti.
+Catatan: bagian "Kelayakan" mengasumsikan SMAP dan MODIS akan tersambung sebelum submission, dan bagian "Pembeda" mengasumsikan KATAM hanya memberi jadwal. Cek kedua hal itu dulu sebelum mengirim. Mau saya buatkan versi bahasa Inggris atau versi lebih ringkas untuk batas karakter formulir?
